@@ -1,16 +1,14 @@
-#include <stdio.h>
-void PrintTable(int number)
+int check(int x,int y,int n)
 {
-    for (int i = 1; i <= 10; i++)
-    {
-
-        printf(" %d x %d = %d\n", number, i, number * i);
-    }
-}
-int main(void)
-{
-
-    PrintTable(5);
-
+ if(x>0&&x<n-1){
+     if(y>0&&y<n-1){
+        return 1;
+     }
+ }
+ else
+ {
     return 0;
+ }
+
+
 }

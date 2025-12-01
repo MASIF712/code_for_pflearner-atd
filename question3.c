@@ -1,16 +1,23 @@
 #include <stdio.h>
-double ATM(int balance)
+int gcd(int m, int n)
 {
-    int amount = 10000;
-    return amount + balance;
+    while (n != 0)
+    {
+        int temp = n;
+        n = m % n;
+        m = temp;
+    }
+    return m;
 }
 int main(void)
 {
-    int amount;
-    printf("enter amount :  ");
-    scanf("%d", &amount);
-    double balance = ATM(amount);
-    printf(" Your account have balance $%.2lf ", balance);
-
+    int a, b;
+    printf(" enter first number : ");
+    scanf("%d", &a);
+    printf(" enter second numebr : ");
+    scanf("%d", &b);
+    int hcf;
+    hcf = gcd(a, b);
+    printf(" HCF of %d and %d is : %d", a, b, hcf);
     return 0;
 }
